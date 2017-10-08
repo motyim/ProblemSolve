@@ -2,3 +2,9 @@
 /ProblemSolve/build/
 /ProblemSolve/target/
 /ProblemSolve/.idea/
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/
+target/test-classes/me/motyim/leetcode/PalindromeNumberTest.class
+target/classes/me/motyim/leetcode/PalindromeNumber.class
