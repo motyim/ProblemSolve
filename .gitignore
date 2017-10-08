@@ -8,3 +8,4 @@
 .idea/
 target/test-classes/me/motyim/leetcode/PalindromeNumberTest.class
 target/classes/me/motyim/leetcode/PalindromeNumber.class
+target/
