@@ -8,7 +8,7 @@ import java.util.Set;
 
 
 /**
- *
+ *https://codility.com/demo/results/trainingJQE523-VAH/#task-0
  * Created by MotYim on 13-Oct-17.
  */
 public class OddOccurrencesInArray {
