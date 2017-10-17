@@ -130,4 +130,58 @@ public class GenomicRangeQuery {
         s.add(index);
         map.put(key,s);
     }
-}
+
+
+    //---------------------------------------------------
+    // Solution number Three
+    // correctness : 100% / performance : 100%
+    // link : https://codility.com/demo/results/trainingNAN4TT-K4M/
+    // read : Counting sort & Prefix sum
+    //---------------------------------------------------
+
+    public int[] solution3(String S, int[] P, int[] Q) {
+        int [] result = new int [P.length];
+        int [][] prefix = new int [S.length()][4];
+
+        //fill prefix with number of occuernce
+        for (int i = 0; i < S.length(); i++) {
+            switch (S.charAt(i)){
+                case 'A': prefix[i][0] = 1; break;
+                case 'C': prefix[i][1] = 1; break;
+                case 'G': prefix[i][2] = 1; break;
+                case 'T': prefix[i][3] = 1; break;
+            }
+        }
+
+        //sum prefix
+        for (int i = 0; i < 4; i++) {
+            for (int j = 1; j < S.length(); j++) {
+                prefix[j][i] += prefix[j-1][i] ;
+            }
+        }
+
+        //search for value in prefix table
+        for (int i = 0; i < P.length; i++) {
+            //limit
+            int x = P[i];
+            int y = Q[i];
+
+            //move to next number to seacrh in
+            for (int factor = 0; factor < 4; factor++) {
+                int diff = 0 ; // if three differece between perfix in x & y then number with in range
+                if(x > 0 ) diff = prefix[x-1][factor];
+                if(prefix[y][factor] - diff > 0 ) {
+                    result[i] = factor +1;
+                    break;
+                }
+            }
+        }
+
+
+        return result;
+
+        }
+
+    }
+
+
