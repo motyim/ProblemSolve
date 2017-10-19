@@ -1,4 +1,4 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson4;
 
 import java.util.HashMap;
 import java.util.HashSet;

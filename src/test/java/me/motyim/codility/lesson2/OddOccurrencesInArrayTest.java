@@ -1,5 +1,6 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson2;
 
+import me.motyim.codility.lesson2.OddOccurrencesInArray;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

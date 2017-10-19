@@ -1,5 +1,6 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson1;
 
+import me.motyim.codility.lesson1.BinaryGap;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

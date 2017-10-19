@@ -1,5 +1,6 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson3;
 
+import me.motyim.codility.lesson3.FrogJmp;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

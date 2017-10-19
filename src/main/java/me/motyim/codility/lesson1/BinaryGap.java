@@ -1,4 +1,4 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson1;
 
 /**
  * https://codility.com/programmers/lessons/1-iterations/binary_gap/

@@ -1,4 +1,4 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson3;
 
 /**
  * https://codility.com/demo/results/training7YYW5U-V7N/

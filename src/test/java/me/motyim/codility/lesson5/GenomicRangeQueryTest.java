@@ -1,5 +1,6 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson5;
 
+import me.motyim.codility.lesson5.GenomicRangeQuery;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

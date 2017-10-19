@@ -1,5 +1,6 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson4;
 
+import me.motyim.codility.lesson4.MaxCounters;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

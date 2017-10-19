@@ -1,4 +1,4 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson2;
 
 /**
  * Created by MY-PC on 13-Oct-17.

@@ -1,9 +1,8 @@
-package me.motyim.codility;
+package me.motyim.codility.lesson2;
 
+import me.motyim.codility.lesson2.CyclicRotation;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by MY-PC on 13-Oct-17.
