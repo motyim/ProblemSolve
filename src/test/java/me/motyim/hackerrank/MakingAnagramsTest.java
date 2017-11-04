@@ -8,15 +8,14 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 /**
  * @author MotYim <mohamed.motyim@gmail.com>
- * @since 03-Nov-17
+ * @since 04-Nov-17
  */
-public class StrongPasswordTest {
+public class MakingAnagramsTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -34,39 +33,33 @@ public class StrongPasswordTest {
     @Test
     public void testCase1(){
 
-        String testInput = "3\nAb1";
-        String expectedOutput  = "3";
+        String testInput = "cde\nabc";
+        String expectedOutput  = "4";
+        testCore(testInput, expectedOutput);
 
-        test(testInput, expectedOutput);
+
     }
 
     @Test
     public void testCase2(){
 
-        String testInput = "11\n#HackerRank";
-        String expectedOutput  = "1";
+        String testInput = "fcrxzwscanmligyxyvym\n" +
+                "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
+        String expectedOutput  = "30";
+        testCore(testInput, expectedOutput);
 
-        test(testInput, expectedOutput);
+
     }
 
-    @Test
-    public void testCase3(){
-
-        String testInput = "4\n4700";
-        String expectedOutput  = "3";
-
-        test(testInput, expectedOutput);
-    }
-
-    private void test(String testInput, String expectedOutput) {
-
+    private void testCore(String testInput, String expectedOutput) {
         // After this he get input form inContent
         ByteArrayInputStream inContent  = new ByteArrayInputStream(testInput.getBytes());
         System.setIn(inContent);
 
 
         //call main method of class
-        StrongPassword.main(null);
+//        MakingAnagrams.main(null);
+        MakingAnagrams2.main(null);
 
         //trim to handle extra space
         String output = outContent.toString().trim();
@@ -75,13 +68,11 @@ public class StrongPasswordTest {
     }
 
 
-
-
-
     @After
     public void cleanUpStreams() {
         //reset after end
         System.setOut(System.out);
         System.setErr(System.err);
     }
+
 }
