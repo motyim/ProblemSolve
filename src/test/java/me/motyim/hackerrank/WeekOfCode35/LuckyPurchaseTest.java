@@ -1,5 +1,6 @@
-package me.motyim.hackerrank;
+package me.motyim.hackerrank.WeekOfCode35;
 
+import me.motyim.hackerrank.WeekOfCode35.LuckyPurchase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,9 +14,10 @@ import static org.junit.Assert.assertThat;
 
 /**
  * @author MotYim <mohamed.motyim@gmail.com>
- * @since 15-Nov-17
+ * @since 13-Nov-17
  */
-public class TripleRecursionTest {
+public class LuckyPurchaseTest {
+
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 
@@ -32,13 +34,13 @@ public class TripleRecursionTest {
     @Test
     public void testCase1(){
 
-        String testInput = "5 10 7";
+        String testInput = "4\n" +
+                "HackerBook 777444\n" +
+                "RankBook 3\n" +
+                "TheBook 777\n" +
+                "BestBook 47";
 
-        String expectedOutput  = "10 9 8 7 6\n" +
-                "9 17 16 15 14\n" +
-                "8 16 24 23 22\n" +
-                "7 15 23 31 30\n" +
-                "6 14 22 30 38";
+        String expectedOutput  = "BestBook";
 
         // After this he get input form inContent
         ByteArrayInputStream inContent  = new ByteArrayInputStream(testInput.getBytes());
@@ -46,7 +48,7 @@ public class TripleRecursionTest {
 
 
         //call main method of class
-        TripleRecursion.main(null);
+        LuckyPurchase.main(null);
 
         //trim to handle extra space
         String output = outContent.toString().trim();
@@ -54,6 +56,27 @@ public class TripleRecursionTest {
         System.setIn(System.in);
     }
 
+    @Test
+    public void testCase2(){
+
+        String testInput = "1\n" +
+                "abacab 121";
+
+        String expectedOutput  = "-1";
+
+        // After this he get input form inContent
+        ByteArrayInputStream inContent  = new ByteArrayInputStream(testInput.getBytes());
+        System.setIn(inContent);
+
+
+        //call main method of class
+        LuckyPurchase.main(null);
+
+        //trim to handle extra space
+        String output = outContent.toString().trim();
+        assertThat(output, is(expectedOutput));
+        System.setIn(System.in);
+    }
 
     @After
     public void cleanUpStreams() {
@@ -61,4 +84,5 @@ public class TripleRecursionTest {
         System.setOut(System.out);
         System.setErr(System.err);
     }
+
 }

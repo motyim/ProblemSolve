@@ -1,4 +1,4 @@
-package me.motyim.hackerrank;
+package me.motyim.hackerrank.crackingInterview;
 
 import java.util.Scanner;
 import java.util.stream.IntStream;

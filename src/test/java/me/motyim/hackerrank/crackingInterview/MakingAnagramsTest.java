@@ -1,5 +1,6 @@
-package me.motyim.hackerrank;
+package me.motyim.hackerrank.crackingInterview;
 
+import me.motyim.hackerrank.crackingInterview.MakingAnagrams2;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,13 +10,13 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 /**
  * @author MotYim <mohamed.motyim@gmail.com>
- * @since 13-Nov-17
+ * @since 04-Nov-17
  */
-public class LuckyPurchaseTest {
+public class MakingAnagramsTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -33,49 +34,40 @@ public class LuckyPurchaseTest {
     @Test
     public void testCase1(){
 
-        String testInput = "4\n" +
-                "HackerBook 777444\n" +
-                "RankBook 3\n" +
-                "TheBook 777\n" +
-                "BestBook 47";
-
-        String expectedOutput  = "BestBook";
-
-        // After this he get input form inContent
-        ByteArrayInputStream inContent  = new ByteArrayInputStream(testInput.getBytes());
-        System.setIn(inContent);
+        String testInput = "cde\nabc";
+        String expectedOutput  = "4";
+        testCore(testInput, expectedOutput);
 
 
-        //call main method of class
-        LuckyPurchase.main(null);
-
-        //trim to handle extra space
-        String output = outContent.toString().trim();
-        assertThat(output, is(expectedOutput));
-        System.setIn(System.in);
     }
 
     @Test
     public void testCase2(){
 
-        String testInput = "1\n" +
-                "abacab 121";
+        String testInput = "fcrxzwscanmligyxyvym\n" +
+                "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
+        String expectedOutput  = "30";
+        testCore(testInput, expectedOutput);
 
-        String expectedOutput  = "-1";
 
+    }
+
+    private void testCore(String testInput, String expectedOutput) {
         // After this he get input form inContent
         ByteArrayInputStream inContent  = new ByteArrayInputStream(testInput.getBytes());
         System.setIn(inContent);
 
 
         //call main method of class
-        LuckyPurchase.main(null);
+//        MakingAnagrams.main(null);
+        MakingAnagrams2.main(null);
 
         //trim to handle extra space
         String output = outContent.toString().trim();
         assertThat(output, is(expectedOutput));
         System.setIn(System.in);
     }
+
 
     @After
     public void cleanUpStreams() {

@@ -1,4 +1,4 @@
-package me.motyim.hackerrank;
+package me.motyim.hackerrank.WeekOfCode35;
 
 import java.util.Map;
 import java.util.Scanner;

@@ -1,5 +1,6 @@
-package me.motyim.hackerrank;
+package me.motyim.hackerrank.crackingInterview;
 
+import me.motyim.hackerrank.crackingInterview.LeftRotation;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +16,7 @@ import static org.junit.Assert.*;
  * @author MotYim <mohamed.motyim@gmail.com>
  * @since 04-Nov-17
  */
-public class MakingAnagramsTest {
+public class LeftRotationTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -33,33 +34,16 @@ public class MakingAnagramsTest {
     @Test
     public void testCase1(){
 
-        String testInput = "cde\nabc";
-        String expectedOutput  = "4";
-        testCore(testInput, expectedOutput);
+        String testInput = "5 4\n1 2 3 4 5";
+        String expectedOutput  = "5 1 2 3 4";
 
-
-    }
-
-    @Test
-    public void testCase2(){
-
-        String testInput = "fcrxzwscanmligyxyvym\n" +
-                "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
-        String expectedOutput  = "30";
-        testCore(testInput, expectedOutput);
-
-
-    }
-
-    private void testCore(String testInput, String expectedOutput) {
         // After this he get input form inContent
         ByteArrayInputStream inContent  = new ByteArrayInputStream(testInput.getBytes());
         System.setIn(inContent);
 
 
         //call main method of class
-//        MakingAnagrams.main(null);
-        MakingAnagrams2.main(null);
+        LeftRotation.main(null);
 
         //trim to handle extra space
         String output = outContent.toString().trim();
@@ -67,12 +51,10 @@ public class MakingAnagramsTest {
         System.setIn(System.in);
     }
 
-
     @After
     public void cleanUpStreams() {
         //reset after end
         System.setOut(System.out);
         System.setErr(System.err);
     }
-
 }
