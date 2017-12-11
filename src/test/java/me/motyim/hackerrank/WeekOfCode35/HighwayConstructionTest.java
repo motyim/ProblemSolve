@@ -1,8 +1,9 @@
 package me.motyim.hackerrank.WeekOfCode35;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
+
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
