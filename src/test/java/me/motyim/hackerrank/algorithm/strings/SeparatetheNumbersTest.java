@@ -2,7 +2,6 @@ package me.motyim.hackerrank.algorithm.strings;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
@@ -10,7 +9,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class SeparatetheNumbersTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -76,6 +75,22 @@ public class SeparatetheNumbersTest {
         String expectedOutput  = "YES 10";
         testCore(testInput, expectedOutput);
     }
+
+    @Test
+    public void testCase7(){
+        String testInput = "2\n99100\n991000";
+        String expectedOutput  = "YES 99\r\nNO";
+        testCore(testInput, expectedOutput);
+    }
+
+    @Test
+    public void testCase8(){
+        String testInput = "2\n99910001001\n9991000100";
+        String expectedOutput  = "YES 999\r\nNO";
+        testCore(testInput, expectedOutput);
+    }
+
+
 
     private void testCore(String testInput, String expectedOutput) {
         // After this he get input form inContent
