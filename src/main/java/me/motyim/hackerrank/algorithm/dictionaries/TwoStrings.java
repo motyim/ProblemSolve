@@ -7,10 +7,10 @@ public class TwoStrings {
     // Complete the twoStrings function below.
     static String twoStrings(String s1, String s2) {
         Set<Integer> set1 = new HashSet<>();
-        s1.chars().forEach(c -> set1.add(c));
+        s1.chars().forEach(set1::add);
 
         Set<Integer> set2 = new HashSet<>();
-        s2.chars().forEach(c -> set2.add(c));
+        s2.chars().forEach(set2::add);
 
 
         for (Integer integer : set2) {
