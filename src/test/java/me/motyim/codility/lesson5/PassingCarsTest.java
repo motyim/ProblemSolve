@@ -1,9 +1,8 @@
 package me.motyim.codility.lesson5;
 
-import me.motyim.codility.lesson5.PassingCars;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Created by MY-PC on 16-Oct-17.
