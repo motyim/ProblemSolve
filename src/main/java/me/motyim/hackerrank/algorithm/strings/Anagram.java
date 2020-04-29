@@ -2,7 +2,7 @@ package me.motyim.hackerrank.algorithm.strings;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//https://www.hackerrank.com/challenges/anagram/problem
 public class Anagram {
 
     static int anagram(String s) {
