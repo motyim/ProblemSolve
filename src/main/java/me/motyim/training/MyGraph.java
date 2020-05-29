@@ -3,6 +3,9 @@ package me.motyim.training;
 
 import java.util.*;
 
+//https://www.youtube.com/watch?v=oDqjPvD54Ss
+//https://www.youtube.com/watch?v=zaBhtODEL0w
+
 public class MyGraph {
 
     private HashMap<Integer,Node> nodeLookup = new HashMap<>();

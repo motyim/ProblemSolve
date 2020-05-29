@@ -1,0 +1,16 @@
+package me.motyim.hackerrank.andelaTest;
+
+import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AnagramDifferenceTest {
+
+    @Test
+    public void preTest(){
+        String f = "nzdvdqtgotierllkqtvfztesncymazaoigzubwmrwhbdjhvjeuiudbcapaxkmjouafhcrecuajnttdtsuruwyjjuwarmbqeoeupczckvlxbqkjyooloycdzqkryevetidwgqwhnpjmtkkfaosnkxggwyrwfyhldjoxitphsaouguxqmfexvzmwcscghzpabdravqavvtowunseshtmwtznjqxxidabbzqybcxzdrdfvbpdrmcfzxgaunshgcasarnjmgbocbphwtjwxwgbxofcsnhftptpagpsphqtefdhfbusvhfaoqhyuzndyhqeduesdlnsgdtihxjmplquzunzbccnmakyaqkzoyzdwltkwtszsozoiuokuqbezltoujbzbgbtobuqttlwdilfpgqnilklanmxuahsrzxqahmfhgbflhboiyntvrvwxcvblxngmnhtksabkufqhwktr";
+        String s = "iyfbpvaoohjlftasyotlbjycdqckqfwugsqqokhaolltremzkdouhtwkhxcjnjvzgevlhatvmibnhleqhwiscncgqzkcsedjyidqketigvsidklteisqzzecssseswawgntsubrvhkjdxzxlmnhkknwpfhpavtbowseovzliqntbzrazxpihyxwemougxnssmtbhsomzbnxszgrlkemajvlvzoiyxqtaedetftnkmnsqogpptjzngadmeidxvbbabhsfttfoqhwfzjocslvuepjwnwshoujrwbhiobirflentxqkzdjipxpdflujjzyopfafhfqimbqakxgpqnpevrwdizsyowgdpzdlhczbgxbjvzhveytajflfhoxlusxbkvanxspqhosviygqdjymceyngdwqtbsfglhnnethbweacnztqyculrlmqsibyhoebymlkonlhrteyskaogk";
+        assertEquals(10,AnagramDifference.numberNeeded(f,s));
+    }
+
+}
