@@ -55,7 +55,7 @@ public class Sort {
     }
 
     public void mergeSort(int arr[]){
-        mergeSortHelper(arr,0,arr.length);
+        mergeSortHelper(arr,0,arr.length-1);
     }
 
     private void mergeSortHelper(int[] arr, int l, int r) {
@@ -123,7 +123,8 @@ public class Sort {
         int[] arr = new int[]{4, 6, 2, 1, 7, 8, 5};
 //        new Sort().bubbleSort(arr);
 //        new Sort().selectionSort(arr);
-        new Sort().insertionSort(arr);
+//        new Sort().insertionSort(arr);
+        new Sort().mergeSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
