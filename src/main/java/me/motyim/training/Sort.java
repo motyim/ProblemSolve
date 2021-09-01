@@ -1,6 +1,8 @@
 package me.motyim.training;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Sort {
 
@@ -72,8 +74,8 @@ public class Sort {
         int n1 = m-l+1;
         int n2 = r-m;
 
-        int L[] = new int [n1];
-        int R[] = new int [n2];
+        int[] L = new int [n1];
+        int[] R = new int [n2];
 
         for (int i = 0; i < n1; i++) {
             L[i]=arr[l+i];
@@ -118,13 +120,40 @@ public class Sort {
 
     }
 
+    // https://www.youtube.com/watch?v=OKd534EWcdk
+    private void countingSort(int [] arr){
+
+        int [] output = new int[arr.length];
+        int range = IntStream.of(arr).max().getAsInt()+1;
+        int [] count = new int[range];
+
+        for (int number:arr) {
+            count[number]++;
+        }
+
+        for (int i = 1; i < count.length; i++) {
+            count[i]+=count[i-1];
+        }
+
+        System.arraycopy(count, 0, count, 1, count.length - 1);
+        count[0]=0;
+
+        for (int number : arr) {
+            output[count[number]] = number;
+            ++count[number];
+        }
+
+        System.arraycopy(output, 0, arr, 0, output.length);
+    }
+
     public static void main(String[] args) {
 
         int[] arr = new int[]{4, 6, 2, 1, 7, 8, 5};
 //        new Sort().bubbleSort(arr);
 //        new Sort().selectionSort(arr);
 //        new Sort().insertionSort(arr);
-        new Sort().mergeSort(arr);
+//        new Sort().mergeSort(arr);
+        new Sort().countingSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
