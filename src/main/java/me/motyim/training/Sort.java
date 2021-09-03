@@ -121,6 +121,7 @@ public class Sort {
     }
 
     // https://www.youtube.com/watch?v=OKd534EWcdk
+    //https://www.geeksforgeeks.org/radix-sort/
     private void countingSort(int [] arr){
 
         int [] output = new int[arr.length];
@@ -146,14 +147,57 @@ public class Sort {
         System.arraycopy(output, 0, arr, 0, output.length);
     }
 
+    private void quickSort(int [] arr){
+        quickSortHelper(arr,0,arr.length-1);
+    }
+
+    private void quickSortHelper(int[] arr, int left, int right) {
+        if(left >= right)
+            return;
+        int pivot = arr[(left+right)/2];
+        int bound = partition(arr,left,right,pivot);
+        quickSortHelper(arr,left,bound-1);
+        quickSortHelper(arr,bound,right);
+    }
+
+    private int partition(int[] arr, int left, int right, int pivot) {
+        while(left <= right){
+            while(arr[left] < pivot ){
+                left++;
+            }
+            while(arr[right] > pivot ){
+                right--;
+            }
+            if(arr[left]>=arr[right]){
+                swap(arr,left,right);
+                left++;
+                right--;
+            }
+        }
+        return left;
+    }
+
+    private int binarySearch(int [] arr ,int value){
+        int left  = 0 , right = arr.length;
+        while(left<right){
+            int mid = (left+right)/2;
+            if(arr[mid] == value) return mid;
+            else if(arr[mid] < value) left = mid +1;
+            else right = mid;
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
 
         int[] arr = new int[]{4, 6, 2, 1, 7, 8, 5};
+
 //        new Sort().bubbleSort(arr);
 //        new Sort().selectionSort(arr);
 //        new Sort().insertionSort(arr);
 //        new Sort().mergeSort(arr);
-        new Sort().countingSort(arr);
+//        new Sort().countingSort(arr);
+        new Sort().quickSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
