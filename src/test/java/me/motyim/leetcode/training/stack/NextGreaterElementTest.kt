@@ -1,5 +1,6 @@
 package me.motyim.leetcode.training.stack
 
+import me.motyim.leetcode.training.module4.NextGreaterElement
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments

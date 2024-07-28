@@ -1,4 +1,4 @@
-package me.motyim.leetcode.training.stack
+package me.motyim.leetcode.training.module4
 
 import java.util.LinkedList
 
