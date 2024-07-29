@@ -10,20 +10,15 @@ class kClosest {
             return point[0] * point[0] + point[1] * point[1]
         }
 
-        val pQueue = PriorityQueue<IntArray>() { point1, point2 ->
+        val pQueue = PriorityQueue<IntArray> { point1, point2 ->
             compareValues(distance(point1), distance(point2))
         }
 
         points.forEach { pQueue.offer(it) }
 
-        val answer = mutableListOf<IntArray>()
-
-        for (i in 0 until k) {
-            answer.add(pQueue.poll())
+        return Array(k){
+            pQueue.poll()
         }
-
-        return answer.toTypedArray()
-
     }
 
 }
